@@ -9,3 +9,5 @@ dist/
 
 # Pytest
 .pytest_cache/
+
+tests/
