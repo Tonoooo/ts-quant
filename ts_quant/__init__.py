@@ -20,7 +20,7 @@ Quickstart:
     >>> df_features = generate_features(df, device='cuda')
 """
 
-__version__ = "0.1.10"
+__version__ = "0.2.0"
 __author__ = "TS-Quant Team"
 
 from ts_quant.api import generate_features

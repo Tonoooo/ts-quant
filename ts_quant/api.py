@@ -65,7 +65,7 @@ def generate_features(
     compute_channels: list = None,
     signature_channels: list = None,
     # ── Feature Selection ──
-    feature_selection: str = 'auto',
+    feature_selection: str = None,
     correlation_threshold: float = 0.95,
     # ── Output ──
     output_dtype: str = 'float32',
@@ -113,9 +113,12 @@ def generate_features(
     signature_channels : list
         Kolom untuk Signatures (multivariat). Default: [close_col, volume_col].
     feature_selection : str
-        'auto' untuk seleksi otomatis, None untuk tanpa seleksi.
+        None (default) untuk mengembalikan SEMUA fitur tanpa filter.
+        'auto' untuk seleksi otomatis (variance + correlation filter).
+        ⚠️ PERINGATAN: 'auto' menyebabkan fitur berbeda antar dataset
+        yang berbeda, sehingga TIDAK cocok untuk training+backtesting.
     correlation_threshold : float
-        Threshold korelasi untuk feature selection. Default: 0.95.
+        Threshold korelasi untuk feature selection (hanya jika 'auto'). Default: 0.95.
     output_dtype : str
         Presisi output. Default: 'float32'.
     verbose : bool
