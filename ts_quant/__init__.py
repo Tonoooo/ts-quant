@@ -1,5 +1,5 @@
 """
-ts-quant — GPU-Accelerated Quantitative Feature Extraction
+ts-quant — GPU-Accelerated Quantitative Feature Extraction (v0.2.0)
 ===========================================================
 
 Library untuk mengekstrak ribuan fitur kuantitatif dari data
