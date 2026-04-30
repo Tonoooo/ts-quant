@@ -21,7 +21,7 @@ Quickstart:
 """
 
 __version__ = "0.2.0"
-__author__ = "TS-Quant Team"
+__author__ = "AnalisaSaham"
 
 from ts_quant.api import generate_features
 
